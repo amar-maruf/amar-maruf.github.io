@@ -111,7 +111,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
   line-height: 1;
   margin-right: 8px;
-  border-radius: 50%;
+  border-radius: 10%;
   width: 40px;
   height: 40px;
 }
