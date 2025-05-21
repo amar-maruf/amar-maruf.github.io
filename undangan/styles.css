@@ -1,0 +1,346 @@
+body {
+  background: #fff6fe url("img/abstract.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 50px;
+}
+.topright {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  width: 150px;
+}
+.flip {
+  transform: scaleX(-1);
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  width: 150px;
+}
+.bottom-center {
+  position: fixed;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%) scaleY(-1);
+  height: 100px;
+}
+.outer-frame {
+  border: 4px solid #77003c;
+  padding: 5px;
+  height: calc(100vh - 100px);
+  box-sizing: border-box;
+}
+.inner-frame {
+  border: 2px solid #ec9bc4;
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+.scroll-container {
+  position: relative;
+  height: 100%;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+.section {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4em;
+  color: #77003c;
+  scroll-snap-align: start;
+}
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  text-align: center;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+.hero-container2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.hero-container2 > * {
+  margin: 0;
+}
+.text-wrapper {
+  max-width: 200px;
+  flex: 1 1 200px;
+  text-align: left;
+}
+.time-wrapper {
+  max-width: 200px;
+  flex: 1 1 200px;
+  text-align: right;
+}
+.time {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0;
+}
+.nama-catin {
+  font-size: 3vw;
+  font-weight: bold;
+}
+.nama-ortu {
+  font-size: 1.5vw;
+  color: black;
+}
+.dan {
+  font-size: 2vw;
+  font-weight: bold;
+  margin: 10px 0;
+}
+.title {
+  font-size: 42px;
+  margin: 0;
+  font-weight: bold;
+}
+.subtitle {
+  font-size: 18px;
+  margin-top: 0.5rem;
+}
+.keterangan {
+  font-size: 1.2vw;
+  text-align: center;
+  margin-bottom: 20px;
+  color: black;
+}
+.isi {
+  font-weight: bold;
+  font-size: 1.5vw;
+  margin: 0;
+}
+.note {
+  font-style: italic;
+  font-size: 1vw;
+  color: black;
+}
+.ayat {
+  font-size: 1.2vw;
+  text-align: center;
+  color: black;
+  margin: 0 15vw 10px 15vw;
+}
+.etiquette-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  text-align: center;
+  max-width: 1000px;
+  gap: 20px;
+}
+.etiquette-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  font-size: 1vw;
+  color: #77003c;
+  text-align: center;
+}
+.etiquette-item img {
+  height: 10vh;
+  width: auto;
+}
+.bismillah-img {
+  display: block;
+  width: 35%;
+  height: auto;
+  margin-bottom: 20px;
+}
+.nama-img {
+  display: block;
+  margin: 20px auto;
+  width: 40%;
+  height: auto;
+}
+.svg-wrapper {
+  text-align: center;
+}
+.no-underline {
+  text-decoration: none;
+  color: inherit;
+}
+form > * {
+  display: block;
+}
+input[type="text"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  font-size: 16px;
+  box-sizing: border-box;
+  resize: vertical;
+  min-height: 100px;
+  max-height: 300px;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: #77003c;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #55002d;
+}
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  max-width: 600px;
+  height: auto;
+  border-radius: 10px;
+  background: #fce4ec;
+  scroll-padding: 0;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  margin-top: 20px;
+}
+
+.slide {
+  scroll-snap-align: start;
+  flex: 0 0 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  user-select: none;
+}
+.slides {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+blockquote {
+  font-size: 2vh;
+  font-style: italic;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+footer {
+  font-size: 2vh;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  .nama-img {
+    width: 80%;
+  }
+  .bismillah-img {
+    width: 35vw;
+  }
+  .nama-catin {
+    font-size: 4.5vw;
+  }
+  .nama-ortu,
+  .keterangan {
+    font-size: 2.5vw;
+  }
+  .dan {
+    font-size: 4vw;
+  }
+  .isi {
+    font-size: 3vw;
+  }
+  .note {
+    font-size: 2vw;
+  }
+  .text-wrapper,
+  .time-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 100%;
+  }
+  .hero-container2 {
+    width: 90%;
+  }
+  .ayat {
+    font-size: 3vw;
+    margin: 0 0 10px 0;
+  }
+  .etiquette-container {
+    margin-top: 20px;
+    gap: 0;
+  }
+  .etiquette-item {
+    width: 50%;
+    font-size: 2.5vw;
+  }
+  .etiquette-item img {
+    width: 14vw;
+    height: auto;
+    margin-top: 10px;
+  }
+  .outer-frame {
+    padding: 10px;
+    height: auto;
+  }
+  .carousel {
+    max-width: 100%;
+  }
+  blockquote {
+    font-size: 1.5vh;
+  }
+
+  footer {
+    font-size: 1.5vh;
+  }
+}
