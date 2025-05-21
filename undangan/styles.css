@@ -66,7 +66,7 @@ body {
   gap: 10px;
   flex-wrap: wrap;
   text-align: center;
-  padding: 0 40px;
+  padding: 0 60px;
   box-sizing: border-box;
 }
 .hero-container2 {
@@ -81,18 +81,18 @@ body {
   margin: 0;
 }
 .text-wrapper {
-  max-width: 200px;
+  max-width: 100%;
   flex: 1 1 200px;
   text-align: left;
 }
 .time-wrapper {
-  max-width: 200px;
+  max-width: 100%;
   flex: 1 1 200px;
   text-align: right;
 }
 .time {
   font-weight: bold;
-  font-size: 18px;
+  font-size: 3vh;
   margin: 0;
 }
 .nama-catin {
@@ -108,14 +108,21 @@ body {
   font-weight: bold;
   margin: 10px 0;
 }
-.title {
-  font-size: 42px;
+.title,
+.modal-title {
+  font-size: 5vh;
   margin: 0;
   font-weight: bold;
 }
-.subtitle {
-  font-size: 18px;
+.subtitle,
+.modal-nama,
+.modal-subtitle {
+  font-size: 2vh;
   margin-top: 0.5rem;
+}
+.modal-keterangan {
+  font-size: 2vh;
+  margin: 0;
 }
 .keterangan {
   font-size: 1.2vw;
@@ -170,7 +177,6 @@ body {
 }
 .nama-img {
   display: block;
-  margin: 20px auto;
   width: 40%;
   height: auto;
 }
@@ -271,6 +277,45 @@ footer {
 .carousel::-webkit-scrollbar {
   display: none;
 }
+.modal-title {
+  font-size: 4vh;
+  font-weight: bold;
+}
+.modal-subtitle {
+  font-size: 2vh;
+}
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #fff6fe url("img/abstract.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  color: #77003c;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.modal .nama-img {
+  width: 400px;
+  height: auto;
+  margin: 60px auto;
+}
 
 @media (max-width: 768px) {
   .hero-container {
@@ -284,6 +329,7 @@ footer {
   .bismillah-img {
     width: 35vw;
   }
+  .time,
   .nama-catin {
     font-size: 4.5vw;
   }
@@ -343,4 +389,28 @@ footer {
   footer {
     font-size: 1.5vh;
   }
+  .modal .nama-img {
+    width: 200px;
+    margin: 20px auto;
+  }
+  .modal-keterangan {
+    font-size: 1.5vh;
+  }
+}
+
+/* Animasi untuk modal saat ditutup */
+@keyframes swipeUp {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
+/* Modal ditutup dengan animasi */
+.modal.close {
+  animation: swipeUp 0.5s forwards; /* Durasi animasi 0.5 detik */
 }

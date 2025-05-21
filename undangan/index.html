@@ -8,6 +8,32 @@
     <link rel="icon" type="image/svg+xml" href="img/icon.svg" />
   </head>
   <body>
+    <audio id="audioPlayer" src="akad.mp3" preload="auto"></audio>
+    <div id="fullscreenModal" class="modal">
+      <div class="modal-content">
+        <h1 class="modal-title">Undangan</h1>
+        <h2 class="modal-subtitle">Walimatul Ursy</h2>
+        <img src="img/nama.svg" alt="Nama" class="nama-img" />
+        <p class="modal-keterangan">
+          Kepada Yang Terhormat<br />Bapak/Ibu/Saudara/i
+        </p>
+        <h2 class="modal-nama" style="margin: 20px auto">Nama Undangan</h2>
+        <button
+          onclick="bukaUndangan()"
+          style="
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            padding: 10px 20px;
+            background-color: #77003c;
+            color: white;
+            border: none;
+            cursor: pointer;
+          "
+        >
+          Buka Undangan
+        </button>
+      </div>
+    </div>
     <div class="outer-frame" id="outerFrame">
       <div class="inner-frame">
         <div class="scroll-container">
@@ -19,7 +45,7 @@
               </div>
               <img src="img/nama.svg" alt="Nama" class="nama-img" />
               <div class="time-wrapper">
-                <p class="time">Jum'at, 27 Juni 2025<br />09.00 - Dzuhur</p>
+                <p class="time">Sabtu, 28 Juni 2025<br />09.00 - Dzuhur</p>
               </div>
             </div>
           </section>
@@ -58,7 +84,7 @@
               <h2 class="keterangan" style="margin-top: 20px">
                 yang akan dilaksanakan pada:
               </h2>
-              <p class="isi">Jum'at, 27 Juni 2025<br />09.00 - Dzuhur</p>
+              <p class="time">Sabtu, 28 Juni 2025<br />09.00 - Dzuhur</p>
               <h2 class="keterangan" style="margin-top: 20px">bertempat di:</h2>
               <p class="isi">
                 <a

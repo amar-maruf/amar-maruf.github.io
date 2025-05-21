@@ -1,3 +1,9 @@
+window.onload = function () {
+  showModal();
+  changeNamaUndanganFromURL();
+  autofillNamaForm();
+};
+
 // -- VIEWPORT HEIGHT --
 function setViewportHeight() {
   const vh = window.innerHeight * 0.01;
@@ -9,6 +15,60 @@ function setViewportHeight() {
 
 window.addEventListener("resize", setViewportHeight);
 window.addEventListener("load", setViewportHeight);
+
+function showModal() {
+  document.getElementById("fullscreenModal").style.display = "flex";
+}
+
+function bukaUndangan() {
+  // Tambahkan kelas 'close' untuk memulai animasi
+  const modal = document.getElementById("fullscreenModal");
+  modal.classList.add("close");
+
+  // Tunggu sampai animasi selesai (0.5s) dan kemudian sembunyikan modal
+  setTimeout(function () {
+    modal.style.display = "none";
+  }, 500); // 500ms adalah durasi animasi
+  var audio = document.getElementById("audioPlayer");
+  audio.volume = 0.5;
+  audio.play();
+}
+
+// Fungsi untuk mengambil parameter dari URL dan mengubah nama undangan
+function changeNamaUndanganFromURL() {
+  const params = new URLSearchParams(window.location.search);
+  const namaUndangan = params.get("kepada"); // Mendapatkan nilai parameter 'nama'
+
+  if (namaUndangan) {
+    // Jika parameter 'nama' ada, kita ganti teks nama undangan
+    const namaUndanganElement = document.querySelector(".modal-nama");
+    if (namaUndanganElement) {
+      namaUndanganElement.textContent = namaUndangan;
+    }
+  }
+}
+
+// Fungsi untuk menghapus simbol dan karakter khusus selain huruf dan spasi
+function removeSpecialCharacters(str) {
+  return str.replace(/[^a-zA-Z\s]/g, ""); // Menghapus karakter selain huruf dan spasi
+}
+
+// Fungsi untuk mengisi otomatis input nama pada form yang sudah ada
+function autofillNamaForm() {
+  const params = new URLSearchParams(window.location.search);
+  const namaForm = params.get("kepada"); // Mendapatkan nilai parameter 'nama'
+
+  if (namaForm) {
+    // Hapus simbol dari nama sebelum mengisi form
+    const cleanedNama = removeSpecialCharacters(namaForm);
+
+    // Cek apakah input dengan ID yang sesuai ada di form
+    const inputNama = document.querySelector("#nama"); // Ganti dengan ID 'nama'
+    if (inputNama) {
+      inputNama.value = cleanedNama; // Mengisi otomatis input dengan nama yang sudah dibersihkan
+    }
+  }
+}
 
 // Validasi real-time kolom ucapan
 document.getElementById("ucapan").addEventListener("input", function (e) {
