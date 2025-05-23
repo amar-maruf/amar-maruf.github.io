@@ -96,21 +96,21 @@ body {
   margin: 0;
 }
 .nama-catin {
-  font-size: 3vw;
+  font-size: 4vh;
   font-weight: bold;
 }
 .nama-ortu {
-  font-size: 1.5vw;
+  font-size: 2vh;
   color: black;
 }
 .dan {
-  font-size: 2vw;
+  font-size: 4vh;
   font-weight: bold;
-  margin: 10px 0;
+  margin: 1vh 0;
 }
 .title,
 .modal-title {
-  font-size: 5vh;
+  font-size: 6vh;
   margin: 0;
   font-weight: bold;
 }
@@ -125,23 +125,23 @@ body {
   margin: 0;
 }
 .keterangan {
-  font-size: 1.2vw;
+  font-size: 2vh;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 2vh;
   color: black;
 }
 .isi {
   font-weight: bold;
-  font-size: 1.5vw;
+  font-size: 2vh;
   margin: 0;
 }
 .note {
   font-style: italic;
-  font-size: 1vw;
+  font-size: 1.5vh;
   color: black;
 }
 .ayat {
-  font-size: 1.2vw;
+  font-size: 2vh;
   text-align: center;
   color: black;
   margin: 0 15vw 10px 15vw;
@@ -151,7 +151,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 4vh;
   text-align: center;
   max-width: 1000px;
   gap: 20px;
@@ -161,7 +161,7 @@ body {
   flex-direction: column;
   align-items: center;
   width: auto;
-  font-size: 1vw;
+  font-size: 2vh;
   color: #77003c;
   text-align: center;
 }
@@ -171,9 +171,9 @@ body {
 }
 .bismillah-img {
   display: block;
-  width: 35%;
+  width: 20vh;
   height: auto;
-  margin-bottom: 20px;
+  margin-bottom: 2vh;
 }
 .nama-img {
   display: block;
@@ -242,7 +242,7 @@ button[type="submit"]:hover {
   scroll-padding: 0;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
-  margin-top: 20px;
+  margin-top: 4vh;
 }
 
 .slide {
@@ -261,7 +261,6 @@ button[type="submit"]:hover {
 }
 blockquote {
   font-size: 2vh;
-  font-style: italic;
   margin-bottom: 10px;
   text-align: center;
 }
@@ -312,9 +311,74 @@ footer {
 }
 
 .modal .nama-img {
-  width: 400px;
+  width: 40vh;
   height: auto;
-  margin: 60px auto;
+  margin: 6vh auto;
+}
+
+.modal-ucapan {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #fff6fe url("img/abstract.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  color: #77003c;
+  z-index: 999;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-ucapan-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 90vw;
+  max-height: 80vh;
+  position: relative;
+  overflow: hidden;
+}
+
+#modalUcapanNama {
+  color: #77003c;
+  text-align: center;
+  font-size: 2.5vh;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+#modalUcapanTextContainer {
+  overflow-y: auto;
+  margin-top: 20px;
+  padding-right: 10px;
+  width: 100%;
+  max-height: 100%;
+}
+
+#modalUcapanText {
+  color: black;
+  font-size: 2vh;
+  text-align: left;
+}
+
+#btnCloseModalUcapan {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #77003c;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -322,6 +386,15 @@ footer {
     flex-direction: column;
     gap: 1rem;
     align-items: center;
+  }
+  .title,
+  .modal-title {
+    font-size: 8vw;
+  }
+  .subtitle,
+  .modal-nama,
+  .modal-subtitle {
+    font-size: 4vw;
   }
   .nama-img {
     width: 80%;
@@ -359,7 +432,7 @@ footer {
     width: 90%;
   }
   .ayat {
-    font-size: 3vw;
+    font-size: 2.5vw;
     margin: 0 0 10px 0;
   }
   .etiquette-container {
@@ -380,14 +453,15 @@ footer {
     height: auto;
   }
   .carousel {
+    scroll-behavior: smooth;
     max-width: 100%;
   }
   blockquote {
-    font-size: 1.5vh;
+    font-size: 3vw;
   }
 
   footer {
-    font-size: 1.5vh;
+    font-size: 3vw;
   }
   .modal .nama-img {
     width: 200px;
@@ -395,6 +469,18 @@ footer {
   }
   .modal-keterangan {
     font-size: 1.5vh;
+  }
+  .modal-ucapan-content {
+    padding: 15px;
+  }
+  #modalUcapanNama {
+    font-size: 4vw;
+  }
+  #modalUcapanText {
+    font-size: 3.5vw;
+  }
+  #btnCloseModalUcapan {
+    font-size: 4vw;
   }
 }
 
@@ -413,4 +499,17 @@ footer {
 /* Modal ditutup dengan animasi */
 .modal.close {
   animation: swipeUp 0.5s forwards; /* Durasi animasi 0.5 detik */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.slide {
+  animation: fadeIn 0.5s ease forwards;
 }
